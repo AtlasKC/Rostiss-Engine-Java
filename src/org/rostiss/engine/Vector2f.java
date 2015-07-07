@@ -1,12 +1,8 @@
 package org.rostiss.engine;
 
-import javax.swing.*;
-
-import static org.lwjgl.opengl.GL11.*;
-
 /**
- * File: Game.java
- * Created by Atlas IND on 7/7/15 at 1:18 AM.
+ * File: Vector2f.java
+ * Created by Atlas IND on 7/7/15 at 12:41 PM.
  * [2014] - [2015] Rostiss Development
  * All rights reserved.
  * NOTICE:  All information contained herein is, and remains
@@ -20,25 +16,32 @@ import static org.lwjgl.opengl.GL11.*;
  * from Rostiss Development.
  */
 
-public class Game {
+public class Vector2f {
 
-    public Game() {}
+    private float x, y;
 
-    public void input() {
-        if(Input.getMouse(0))
-            JOptionPane.showMessageDialog(null, Input.getMousePosition().toString());
+    public Vector2f(float x, float y) {
+        this.x = x;
+        this.y = y;
     }
 
-    public void update() {
-
+    public float getX() {
+        return x;
     }
 
-    public void render() {
-        glBegin(GL_QUADS);
-        glVertex2f(-0.5f, -0.5f);
-        glVertex2f(-0.5f,  0.5f);
-        glVertex2f( 0.5f,  0.5f);
-        glVertex2f( 0.5f, -0.5f);
-        glEnd();
+    public void setX(float x) {
+        this.x = x;
+    }
+
+    public float getY() {
+        return y;
+    }
+
+    public void setY(float y) {
+        this.y = y;
+    }
+
+    public String toString() {
+        return "Vector2f: (" + x + ", " + y + ")";
     }
 }

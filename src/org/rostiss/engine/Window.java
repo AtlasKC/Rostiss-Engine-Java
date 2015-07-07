@@ -1,16 +1,10 @@
 package org.rostiss.engine;
 
-import org.lwjgl.Sys;
-import org.lwjgl.glfw.GLFWErrorCallback;
-import org.lwjgl.glfw.GLFWvidmode;
-
-import java.nio.ByteBuffer;
-
-import static org.lwjgl.glfw.Callbacks.errorCallbackPrint;
-import static org.lwjgl.glfw.GLFW.*;
-import static org.lwjgl.opengl.GL11.GL_FALSE;
-import static org.lwjgl.opengl.GL11.GL_TRUE;
-import static org.lwjgl.system.MemoryUtil.NULL;
+import org.lwjgl.LWJGLException;
+import org.lwjgl.input.Keyboard;
+import org.lwjgl.input.Mouse;
+import org.lwjgl.opengl.Display;
+import org.lwjgl.opengl.DisplayMode;
 
 /**
  * File: Window.java
@@ -30,43 +24,33 @@ import static org.lwjgl.system.MemoryUtil.NULL;
 
 public class Window {
 
-    private static GLFWErrorCallback errorCallback;
-    private static String title;
-    private static int width, height;
-    private static long window;
-
     public static void create(int width, int height, String title) {
-        System.out.println("Welcome to Rostiss | LWJGL " + Sys.getVersion());
-        Window.width = width;
-        Window.height = height;
-        Window.title = title;
-        glfwSetErrorCallback(errorCallback = errorCallbackPrint(System.err));
-        if(glfwInit() != GL_TRUE)
-            throw new IllegalStateException("Error: GLFW - Failed to initialize GLFW");
-        glfwWindowHint(GLFW_VISIBLE, GL_TRUE);
-        glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
-        window = glfwCreateWindow(width, height, title, NULL, NULL);
-        if(window == NULL)
-            throw new RuntimeException("Error: GLFW - Failed to create window");
-        ByteBuffer vidmode = glfwGetVideoMode(glfwGetPrimaryMonitor());
-        glfwSetWindowPos(window, (GLFWvidmode.width(vidmode) - width) / 2, (GLFWvidmode.height(vidmode) - height) / 2);
-        glfwMakeContextCurrent(window);
-        glfwSwapInterval(0);
-        glfwShowWindow(window);
+        Display.setTitle(title);
+        try {
+            Display.setDisplayMode(new DisplayMode(width, height));
+            Display.create();
+            Keyboard.create();
+            Mouse.create();
+        } catch (LWJGLException e) {
+            e.printStackTrace();
+        }
     }
 
-    public static long getWindow() { return window; }
-
-    public static int getWidth() { return width; }
-
-    public static int getHeight() { return height; }
-
-    public static String getTitle() { return title; }
-
-    public static boolean isCloseRequested() { return glfwWindowShouldClose(window) == GL_TRUE; }
+    public static void render() {
+        Display.update();
+    }
 
     public static void clean() {
-        glfwDestroyWindow(window);
-        glfwTerminate();
+        Display.destroy();
+        Keyboard.destroy();
+        Mouse.destroy();
     }
+
+    public static boolean isCloseRequested() { return Display.isCloseRequested(); }
+
+    public static int getWidth() { return Display.getDisplayMode().getWidth(); }
+
+    public static int getHeight() { return Display.getDisplayMode().getHeight(); }
+
+    public static String getTitle() { return Display.getTitle(); }
 }

@@ -1,9 +1,5 @@
 package org.rostiss.engine;
 
-import org.lwjgl.opengl.GLContext;
-
-import static org.lwjgl.glfw.GLFW.glfwPollEvents;
-import static org.lwjgl.glfw.GLFW.glfwSwapBuffers;
 import static org.lwjgl.opengl.GL11.*;
 
 /**
@@ -50,8 +46,6 @@ public class MainComponent {
 
     private void run() {
         running = true;
-        GLContext.createFromCurrent();
-        glClearColor(1, 0, 0, 0);
         final double frameTime = 1.0 / FRAME_CAP;
         double unprocessed = 0.0;
         int frames = 0;
@@ -89,14 +83,13 @@ public class MainComponent {
                     e.printStackTrace();
                 }
             }
-            glfwPollEvents();
         }
     }
 
     private void render() {
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         game.render();
-        glfwSwapBuffers(Window.getWindow());
+        Window.render();
     }
 
     private void clean() {
