@@ -1,8 +1,8 @@
 package org.rostiss.engine;
 
 /**
- * File: Main.java
- * Created by Atlas IND on 7/6/15 at 11:55 PM.
+ * File: Game.java
+ * Created by Atlas IND on 7/7/15 at 1:18 AM.
  * [2014] - [2015] Rostiss Development
  * All rights reserved.
  * NOTICE:  All information contained herein is, and remains
@@ -16,9 +16,13 @@ package org.rostiss.engine;
  * from Rostiss Development.
  */
 
-public class Main {
+public class Game {
 
-    public static void main(String[] args) {
-        new Window(1280, 720, "Rostiss Engine Java");
-    }
+    public Game() {}
+
+    public void input() {}
+
+    public void update() {}
+
+    public void render() {}
 }

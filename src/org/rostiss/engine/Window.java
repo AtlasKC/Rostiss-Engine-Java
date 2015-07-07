@@ -1,17 +1,16 @@
 package org.rostiss.engine;
 
-import java.awt.*;
-
 import org.lwjgl.Sys;
-import org.lwjgl.glfw.*;
-import org.lwjgl.opengl.*;
+import org.lwjgl.glfw.GLFWErrorCallback;
+import org.lwjgl.glfw.GLFWvidmode;
 
 import java.nio.ByteBuffer;
 
-import static org.lwjgl.glfw.Callbacks.*;
+import static org.lwjgl.glfw.Callbacks.errorCallbackPrint;
 import static org.lwjgl.glfw.GLFW.*;
-import static org.lwjgl.opengl.GL11.*;
-import static org.lwjgl.system.MemoryUtil.*;
+import static org.lwjgl.opengl.GL11.GL_FALSE;
+import static org.lwjgl.opengl.GL11.GL_TRUE;
+import static org.lwjgl.system.MemoryUtil.NULL;
 
 /**
  * File: Window.java
@@ -31,27 +30,16 @@ import static org.lwjgl.system.MemoryUtil.*;
 
 public class Window {
 
-    private GLFWErrorCallback errorCallback;
-    private String title;
-    private int width, height;
-    private long window;
+    private static GLFWErrorCallback errorCallback;
+    private static String title;
+    private static int width, height;
+    private static long window;
 
-    public Window(int width, int height, String title) {
+    public static void create(int width, int height, String title) {
         System.out.println("Welcome to Rostiss | LWJGL " + Sys.getVersion());
-        this.width = width;
-        this.height = height;
-        this.title = title;
-        try {
-            init();
-            loop();
-            glfwDestroyWindow(window);
-        } finally {
-            glfwTerminate();
-            errorCallback.release();
-        }
-    }
-
-    private void init() {
+        Window.width = width;
+        Window.height = height;
+        Window.title = title;
         glfwSetErrorCallback(errorCallback = errorCallbackPrint(System.err));
         if(glfwInit() != GL_TRUE)
             throw new IllegalStateException("Error: GLFW - Failed to initialize GLFW");
@@ -63,17 +51,22 @@ public class Window {
         ByteBuffer vidmode = glfwGetVideoMode(glfwGetPrimaryMonitor());
         glfwSetWindowPos(window, (GLFWvidmode.width(vidmode) - width) / 2, (GLFWvidmode.height(vidmode) - height) / 2);
         glfwMakeContextCurrent(window);
-        glfwSwapInterval(1);
+        glfwSwapInterval(0);
         glfwShowWindow(window);
     }
 
-    private void loop() {
-        GLContext.createFromCurrent();
-        glClearColor(1, 0, 0, 0);
-        while(glfwWindowShouldClose(window) == GL_FALSE) {
-            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-            glfwSwapBuffers(window);
-            glfwPollEvents();
-        }
+    public static long getWindow() { return window; }
+
+    public static int getWidth() { return width; }
+
+    public static int getHeight() { return height; }
+
+    public static String getTitle() { return title; }
+
+    public static boolean isCloseRequested() { return glfwWindowShouldClose(window) == GL_TRUE; }
+
+    public static void clean() {
+        glfwDestroyWindow(window);
+        glfwTerminate();
     }
 }
