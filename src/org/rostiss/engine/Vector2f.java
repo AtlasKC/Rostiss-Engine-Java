@@ -1,5 +1,7 @@
 package org.rostiss.engine;
 
+import static java.lang.Math.*;
+
 /**
  * File: Vector2f.java
  * Created by Atlas IND on 7/7/15 at 12:41 PM.
@@ -23,6 +25,60 @@ public class Vector2f {
     public Vector2f(float x, float y) {
         this.x = x;
         this.y = y;
+    }
+
+    public float length() {
+        return (float)sqrt(x * x + y * y);
+    }
+
+    public float dot(Vector2f vector) {
+        return x * vector.getX() + y * vector.getY();
+    }
+
+    public Vector2f normalize() {
+        float length = length();
+        x /= length;
+        y /= length;
+        return this;
+    }
+
+    public Vector2f rotate(float degrees) {
+        double angle = toRadians(degrees);
+        double cos = cos(angle);
+        double sin = sin(angle);
+        return new Vector2f((float)(x * cos - y * sin), (float)(x * sin + y * cos));
+    }
+
+    public Vector2f add(Vector2f vector) {
+        return new Vector2f(x + vector.getX(), y + vector.getY());
+    }
+
+    public Vector2f add(float value) {
+        return new Vector2f(x + value, y + value);
+    }
+
+    public Vector2f sub(Vector2f vector) {
+        return new Vector2f(x - vector.getX(), y - vector.getY());
+    }
+
+    public Vector2f sub(float value) {
+        return new Vector2f(x - value, y - value);
+    }
+
+    public Vector2f mul(Vector2f vector) {
+        return new Vector2f(x * vector.getX(), y * vector.getY());
+    }
+
+    public Vector2f mul(float value) {
+        return new Vector2f(x * value, y * value);
+    }
+
+    public Vector2f div(Vector2f vector) {
+        return new Vector2f(x / vector.getX(), y / vector.getY());
+    }
+
+    public Vector2f div(float value) {
+        return new Vector2f(x / value, y / value);
     }
 
     public float getX() {
