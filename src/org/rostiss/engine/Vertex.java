@@ -1,8 +1,8 @@
 package org.rostiss.engine;
 
 /**
- * File: Game.java
- * Created by Atlas IND on 7/7/15 at 1:18 AM.
+ * File: Vertex.java
+ * Created by Atlas IND on 7/8/15 at 4:20 PM.
  * [2014] - [2015] Rostiss Development
  * All rights reserved.
  * NOTICE:  All information contained herein is, and remains
@@ -16,20 +16,21 @@ package org.rostiss.engine;
  * from Rostiss Development.
  */
 
-public class Game {
+public class Vertex {
 
-    private Mesh mesh;
+    public static final int SIZE = 3;
 
-    public Game() {
-        mesh = new Mesh();
-        mesh.addVertices(new Vertex[] { new Vertex(new Vector3f(-1, -1, 0)), new Vertex(new Vector3f(0, 1, 0)), new Vertex(new Vector3f(1, -1, 0)) });
+    private Vector3f position;
+
+    public Vertex(Vector3f position) {
+        this.position = position;
     }
 
-    public void input() {}
+    public Vector3f getPosition() {
+        return position;
+    }
 
-    public void update() {}
-
-    public void render() {
-        mesh.render();
+    public void setPosition(Vector3f position) {
+        this.position = position;
     }
 }

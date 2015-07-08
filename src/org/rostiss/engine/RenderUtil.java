@@ -1,8 +1,11 @@
 package org.rostiss.engine;
 
+import static org.lwjgl.opengl.GL11.*;
+import static org.lwjgl.opengl.GL30.GL_FRAMEBUFFER_SRGB;
+
 /**
- * File: Game.java
- * Created by Atlas IND on 7/7/15 at 1:18 AM.
+ * File: RenderUtil.java
+ * Created by Atlas IND on 7/8/15 at 4:08 PM.
  * [2014] - [2015] Rostiss Development
  * All rights reserved.
  * NOTICE:  All information contained herein is, and remains
@@ -16,20 +19,18 @@ package org.rostiss.engine;
  * from Rostiss Development.
  */
 
-public class Game {
+public class RenderUtil {
 
-    private Mesh mesh;
-
-    public Game() {
-        mesh = new Mesh();
-        mesh.addVertices(new Vertex[] { new Vertex(new Vector3f(-1, -1, 0)), new Vertex(new Vector3f(0, 1, 0)), new Vertex(new Vector3f(1, -1, 0)) });
+    public static void init() {
+        glClearColor(0.1f, 0.1f, 0.1f, 1);
+        glFrontFace(GL_CW);
+        glCullFace(GL_BACK);
+        glEnable(GL_CULL_FACE);
+        glEnable(GL_DEPTH_TEST);
+        glEnable(GL_FRAMEBUFFER_SRGB);
     }
 
-    public void input() {}
-
-    public void update() {}
-
-    public void render() {
-        mesh.render();
+    public static void clearScreen() {
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     }
 }

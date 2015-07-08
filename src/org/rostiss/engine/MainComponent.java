@@ -1,7 +1,5 @@
 package org.rostiss.engine;
 
-import static org.lwjgl.opengl.GL11.*;
-
 /**
  * File: MainComponent.java
  * Created by Atlas IND on 7/6/15 at 11:55 PM.
@@ -28,6 +26,7 @@ public class MainComponent {
     private boolean running;
 
     public MainComponent() {
+        RenderUtil.init();
         game = new Game();
         running = false;
     }
@@ -66,6 +65,7 @@ public class MainComponent {
                 }
                 Time.setDelta(timer);
                 game.input();
+                Input.update();
                 game.update();
                 if(timer >= Time.SECOND) {
                     System.out.println(frames + "fps");
@@ -87,7 +87,7 @@ public class MainComponent {
     }
 
     private void render() {
-        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        RenderUtil.clearScreen();
         game.render();
         Window.render();
     }

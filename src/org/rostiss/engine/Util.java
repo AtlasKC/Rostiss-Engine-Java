@@ -1,8 +1,12 @@
 package org.rostiss.engine;
 
+import org.lwjgl.BufferUtils;
+
+import java.nio.FloatBuffer;
+
 /**
- * File: Game.java
- * Created by Atlas IND on 7/7/15 at 1:18 AM.
+ * File: Util.java
+ * Created by Atlas IND on 7/8/15 at 4:31 PM.
  * [2014] - [2015] Rostiss Development
  * All rights reserved.
  * NOTICE:  All information contained herein is, and remains
@@ -16,20 +20,16 @@ package org.rostiss.engine;
  * from Rostiss Development.
  */
 
-public class Game {
+public class Util {
 
-    private Mesh mesh;
-
-    public Game() {
-        mesh = new Mesh();
-        mesh.addVertices(new Vertex[] { new Vertex(new Vector3f(-1, -1, 0)), new Vertex(new Vector3f(0, 1, 0)), new Vertex(new Vector3f(1, -1, 0)) });
-    }
-
-    public void input() {}
-
-    public void update() {}
-
-    public void render() {
-        mesh.render();
+    public static FloatBuffer createFloatBuffer(Vertex[] vertices) {
+        FloatBuffer result = BufferUtils.createFloatBuffer(vertices.length * Vertex.SIZE);
+        for(int i = 0; i < vertices.length; i++) {
+            result.put(vertices[i].getPosition().getX());
+            result.put(vertices[i].getPosition().getY());
+            result.put(vertices[i].getPosition().getZ());
+        }
+        result.flip();
+        return result;
     }
 }
