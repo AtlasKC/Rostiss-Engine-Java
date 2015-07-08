@@ -1,7 +1,7 @@
 # Rostiss Engine
 About the engine...
 
-Hello!  Rostiss is an intuitive, advanced game engine created by Rostiss Development Team.  The engine is still in it's early stages so not much is known about what the finished product will include, but we can be sure that it wil feature an extensive set of development tools and programs to make your game design experience much more enjoyable and immersive.  Be sure to come back in the near future to check out any updates!
+Hello!  Rostiss is an intuitive, advanced game engine created by Rostiss Development Team.  The engine is still in it's early stages so not much is known about what the finished product will include, but we can be sure that it will feature an extensive set of development tools and programs to make your game design experience much more enjoyable and immersive.  Be sure to come back in the near future to check out any updates!
 
 =
 
