@@ -6,17 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e128396e-e405-4411-a432-05532a9044a3" name="Default" comment="Day 4 - Created static utility classes and Mesh and Vertex classes, prepared for rendering.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/rostiss/engine/ResourceLoader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/rostiss/engine/Shader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/shaders/basic.rfs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/shaders/basic.rvs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/Window.class" afterPath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/Window.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/rostiss/engine/Game.java" afterPath="$PROJECT_DIR$/src/org/rostiss/engine/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/rostiss/engine/RenderUtil.java" afterPath="$PROJECT_DIR$/src/org/rostiss/engine/RenderUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/rostiss/engine/Window.java" afterPath="$PROJECT_DIR$/src/org/rostiss/engine/Window.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="e128396e-e405-4411-a432-05532a9044a3" name="Default" comment="Day 4 Pt. 2 - Added shader class and basic shaders." />
     <ignored path=".idea/dataSources.local.xml" />
     <manually-removed-from-ignored>
       <directory path="$PROJECT_DIR$/out/" />
@@ -41,8 +31,8 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.57894737">
-              <caret line="26" column="141" selection-start-line="26" selection-start-column="141" selection-end-line="26" selection-end-column="141" />
+            <state vertical-scroll-proportion="0.54385966">
+              <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -53,9 +43,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="35" column="53" selection-start-line="35" selection-start-column="53" selection-end-line="35" selection-end-column="53" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -154,6 +142,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="-160" />
+    <option name="y" value="227" />
     <option name="width" value="1600" />
     <option name="height" value="896" />
   </component>
@@ -558,7 +548,7 @@
       <workItem from="1436274966366" duration="12814000" />
       <workItem from="1436371026408" duration="3521000" />
       <workItem from="1436383226398" duration="84000" />
-      <workItem from="1436383402900" duration="10406000" />
+      <workItem from="1436383402900" duration="10451000" />
     </task>
     <task id="LOCAL-00001" summary="Day 1 - Implemented basic static Window class using GLFW as well as a preliminary game loop and timing system in the MainComponent class.">
       <created>1436246850007</created>
@@ -578,14 +568,20 @@
       <option name="project" value="LOCAL" />
       <updated>1436389479886</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Day 4 Pt. 2 - Added shader class and basic shaders.">
+      <created>1436395126013</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1436395126013</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34250000" />
+    <option name="totallyTimeSpent" value="34295000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1600" height="896" extended-state="0" />
+    <frame x="-160" y="227" width="1600" height="896" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -596,7 +592,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32165205" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32165205" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14205256" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -630,7 +626,8 @@
     <MESSAGE value="Day 1 - Implemented basic static Window class using GLFW as well as a preliminary game loop and timing system in the MainComponent class." />
     <MESSAGE value="Day 2 - Converted to LWJGL 2.9.3 for simpler window creation and input, and added input class." />
     <MESSAGE value="Day 4 - Created static utility classes and Mesh and Vertex classes, prepared for rendering." />
-    <option name="LAST_COMMIT_MESSAGE" value="Day 4 - Created static utility classes and Mesh and Vertex classes, prepared for rendering." />
+    <MESSAGE value="Day 4 Pt. 2 - Added shader class and basic shaders." />
+    <option name="LAST_COMMIT_MESSAGE" value="Day 4 Pt. 2 - Added shader class and basic shaders." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -813,7 +810,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="37" column="9" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -848,16 +845,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="35" column="53" selection-start-line="35" selection-start-column="53" selection-end-line="35" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57894737">
-          <caret line="26" column="141" selection-start-line="26" selection-start-column="141" selection-end-line="26" selection-end-column="141" />
+        <state vertical-scroll-proportion="0.54385966">
+          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
           <folding />
         </state>
       </provider>
