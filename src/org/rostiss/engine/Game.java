@@ -19,10 +19,15 @@ package org.rostiss.engine;
 public class Game {
 
     private Mesh mesh;
+    private Shader shader;
 
     public Game() {
         mesh = new Mesh();
+        shader = new Shader();
         mesh.addVertices(new Vertex[] { new Vertex(new Vector3f(-1, -1, 0)), new Vertex(new Vector3f(0, 1, 0)), new Vertex(new Vector3f(1, -1, 0)) });
+        shader.addVertex(ResourceLoader.loadShader("basic.rvs"));
+        shader.addFragment(ResourceLoader.loadShader("basic.rfs"));
+        shader.compileShader();
     }
 
     public void input() {}
@@ -30,6 +35,7 @@ public class Game {
     public void update() {}
 
     public void render() {
+        shader.bind();
         mesh.render();
     }
 }

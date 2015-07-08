@@ -34,6 +34,7 @@ public class Window {
         } catch (LWJGLException e) {
             e.printStackTrace();
         }
+        System.out.println("Welcome to Rostiss | OpenGL: " + RenderUtil.getOpenGLVersion());
     }
 
     public static void render() {
