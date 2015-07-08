@@ -22,7 +22,7 @@ import static org.lwjgl.opengl.GL30.GL_FRAMEBUFFER_SRGB;
 public class RenderUtil {
 
     public static void init() {
-        glClearColor(0.1f, 0.1f, 0.1f, 1);
+        glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
         glFrontFace(GL_CW);
         glCullFace(GL_BACK);
         glEnable(GL_CULL_FACE);

@@ -32,10 +32,10 @@ public class Mesh {
     public void addVertices(Vertex[] vertices) {
         size = vertices.length;
         glBindBuffer(GL_ARRAY_BUFFER, vbo);
-        glBufferData(vbo, Util.createFloatBuffer(vertices), GL_STATIC_DRAW);
+        glBufferData(GL_ARRAY_BUFFER, Util.createFlippedBuffer(vertices), GL_STATIC_DRAW);
     }
 
-    public void render() {
+    public void draw() {
         glEnableVertexAttribArray(0);
         glBindBuffer(GL_ARRAY_BUFFER, vbo);
         glVertexAttribPointer(0, 3, GL_FLOAT, false, Vertex.SIZE * 4, 0);

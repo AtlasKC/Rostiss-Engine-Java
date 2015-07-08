@@ -27,28 +27,29 @@ public class MainComponent {
 
     public MainComponent() {
         RenderUtil.init();
-        game = new Game();
         running = false;
+        game = new Game();
     }
 
     public void start() {
-        if(!running)
-            run();
+        if(running)
+            return;
+        run();
     }
 
     public void stop() {
-        if(running) {
-            running = false;
-            clean();
-        }
+        if(!running)
+            return;
+        running = false;
     }
 
     private void run() {
         running = true;
-        final double frameTime = 1.0 / FRAME_CAP;
-        double unprocessed = 0.0;
         int frames = 0;
-        long previous = Time.getTime(), timer = 0;
+        long timer = 0;
+        final double frameTime = 1.0 / FRAME_CAP;
+        long previous = Time.getTime();
+        double unprocessed = 0;
         while (running) {
             boolean render = false;
             long current = Time.getTime();
@@ -59,11 +60,9 @@ public class MainComponent {
             while(unprocessed > frameTime) {
                 render = true;
                 unprocessed -= frameTime;
-                if (Window.isCloseRequested()) {
+                if (Window.isCloseRequested())
                     stop();
-                    return;
-                }
-                Time.setDelta(timer);
+                Time.setDelta(frameTime);
                 game.input();
                 Input.update();
                 game.update();
@@ -84,6 +83,7 @@ public class MainComponent {
                 }
             }
         }
+        clean();
     }
 
     private void render() {

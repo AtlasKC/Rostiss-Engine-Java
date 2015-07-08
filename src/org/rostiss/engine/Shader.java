@@ -33,7 +33,6 @@ public class Shader {
 
     public void bind() {
         glUseProgram(program);
-        glBindAttribLocation(program, 0, "position");
     }
 
     public void compileShader() {

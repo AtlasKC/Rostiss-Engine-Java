@@ -22,8 +22,12 @@ import java.nio.FloatBuffer;
 
 public class Util {
 
-    public static FloatBuffer createFloatBuffer(Vertex[] vertices) {
-        FloatBuffer result = BufferUtils.createFloatBuffer(vertices.length * Vertex.SIZE);
+    public static FloatBuffer createFloatBuffer(int size) {
+        return BufferUtils.createFloatBuffer(size);
+    }
+
+    public static FloatBuffer createFlippedBuffer(Vertex[] vertices) {
+        FloatBuffer result = createFloatBuffer(vertices.length * Vertex.SIZE);
         for(int i = 0; i < vertices.length; i++) {
             result.put(vertices[i].getPosition().getX());
             result.put(vertices[i].getPosition().getY());

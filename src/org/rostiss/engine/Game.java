@@ -24,7 +24,8 @@ public class Game {
     public Game() {
         mesh = new Mesh();
         shader = new Shader();
-        mesh.addVertices(new Vertex[] { new Vertex(new Vector3f(-1, -1, 0)), new Vertex(new Vector3f(0, 1, 0)), new Vertex(new Vector3f(1, -1, 0)) });
+        Vertex[] data = new Vertex[] { new Vertex(new Vector3f(-1, -1, 0)), new Vertex(new Vector3f(0, 1, 0)), new Vertex(new Vector3f(1, -1, 0)) };
+        mesh.addVertices(data);
         shader.addVertex(ResourceLoader.loadShader("basic.rvs"));
         shader.addFragment(ResourceLoader.loadShader("basic.rfs"));
         shader.compileShader();
@@ -36,6 +37,6 @@ public class Game {
 
     public void render() {
         shader.bind();
-        mesh.render();
+        mesh.draw();
     }
 }
