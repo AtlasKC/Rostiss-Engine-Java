@@ -21,6 +21,7 @@ import static org.lwjgl.opengl.GL32.GL_GEOMETRY_SHADER;
  * from Rostiss Development.
  */
 
+@SuppressWarnings("deprecation")
 public class Shader {
 
     private HashMap<String, Integer> uniforms;

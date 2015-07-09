@@ -4,6 +4,7 @@ import org.lwjgl.BufferUtils;
 
 import java.nio.FloatBuffer;
 import java.nio.IntBuffer;
+import java.util.ArrayList;
 
 /**
  * File: Util.java
@@ -33,10 +34,10 @@ public class Util {
 
     public static FloatBuffer createFlippedBuffer(Vertex[] vertices) {
         FloatBuffer result = createFloatBuffer(vertices.length * Vertex.SIZE);
-        for(int i = 0; i < vertices.length; i++) {
-            result.put(vertices[i].getPosition().getX());
-            result.put(vertices[i].getPosition().getY());
-            result.put(vertices[i].getPosition().getZ());
+        for (Vertex vertex : vertices) {
+            result.put(vertex.getPosition().getX());
+            result.put(vertex.getPosition().getY());
+            result.put(vertex.getPosition().getZ());
         }
         result.flip();
         return result;
@@ -57,4 +58,28 @@ public class Util {
         result.flip();
         return result;
     }
+
+  	public static String[] removeEmptyStrings(String[] data)
+  	{
+      		ArrayList<String> result = new ArrayList<>();
+
+        for (String aData : data)
+            if (!aData.equals(""))
+                result.add(aData);
+      
+              		String[] res = new String[result.size()];
+      		result.toArray(res);
+      
+              		return res;
+      	}
+  
+          	public static int[] toIntArray(Integer[] data)
+  	{
+      		int[] result = new int[data.length];
+      
+              		for(int i = 0; i < data.length; i++)
+          			result[i] = data[i];
+      
+              		return result;
+      	}
 }
