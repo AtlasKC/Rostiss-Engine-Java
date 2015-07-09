@@ -1,5 +1,7 @@
 package org.rostiss.engine;
 
+import java.util.HashMap;
+
 import static org.lwjgl.opengl.GL20.*;
 import static org.lwjgl.opengl.GL32.GL_GEOMETRY_SHADER;
 
@@ -21,14 +23,41 @@ import static org.lwjgl.opengl.GL32.GL_GEOMETRY_SHADER;
 
 public class Shader {
 
+    private HashMap<String, Integer> uniforms;
     private int program;
 
     public Shader() {
         program = glCreateProgram();
+        uniforms = new HashMap<>();
         if(program == 0) {
             System.err.println("Error: Could not glCreateProgram() in Shader class.");
             System.exit(-1);
         }
+    }
+
+    public void addUniform(String name) {
+        int location = glGetUniformLocation(program, name);
+        if(location == 0xFFFFFF) {
+            System.err.println("Error: Could not find uniform " + name);
+            System.exit(-1);
+        }
+        uniforms.put(name, location);
+    }
+
+    public void setUniform1i(String name, int value) {
+        glUniform1i(uniforms.get(name), value);
+    }
+
+    public void setUniform1f(String name, float value) {
+        glUniform1f(uniforms.get(name), value);
+    }
+
+    public void setUniform3f(String name, Vector3f value) {
+        glUniform3f(uniforms.get(name), value.getX(), value.getY(), value.getZ());
+    }
+
+    public void setUniform4f(String name, Matrix4f value) {
+        glUniformMatrix4(uniforms.get(name), true, Util.createFlippedBuffer(value));
     }
 
     public void bind() {

@@ -29,14 +29,20 @@ public class Game {
         shader.addVertex(ResourceLoader.loadShader("basic.rvs"));
         shader.addFragment(ResourceLoader.loadShader("basic.rfs"));
         shader.compileShader();
+        shader.addUniform("scale");
     }
 
     public void input() {}
 
-    public void update() {}
+    float tmp = 0;
+
+    public void update() {
+        tmp += Time.getDelta();
+    }
 
     public void render() {
         shader.bind();
+        shader.setUniform1f("scale", (float)Math.abs(Math.sin(tmp)));
         mesh.draw();
     }
 }
