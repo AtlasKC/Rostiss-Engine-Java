@@ -1,6 +1,6 @@
 package org.rostiss.engine;
 
-import static java.lang.Math.sqrt;
+import static java.lang.Math.*;
 
 /**
  * File: Vector3f.java
@@ -51,8 +51,20 @@ public class Vector3f {
         return this;
     }
 
-    public Vector3f rotate(float degrees) {
-        return null;
+    public Vector3f rotate(float degrees, Vector3f axis) {
+        float sin = (float)sin(toRadians(degrees / 2));
+        float cos = (float)cos(toRadians(degrees / 2));
+        float rX = axis.getX() * sin;
+        float rY = axis.getY() * sin;
+        float rZ = axis.getZ() * sin;
+        float rW = cos;
+        Quaternion quaternion = new Quaternion(rX, rY, rZ, rW);
+        Quaternion conjugate = quaternion.conjugate();
+        Quaternion rotation = quaternion.mul(this).mul(conjugate);
+        x = rotation.getX();
+        y = rotation.getY();
+        z = rotation.getZ();
+        return this;
     }
 
     public Vector3f add(Vector3f vector) {

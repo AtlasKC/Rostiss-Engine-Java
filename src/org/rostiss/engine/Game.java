@@ -20,13 +20,16 @@ public class Game {
 
     private Mesh mesh;
     private Shader shader;
+    private Camera camera;
     private Transform transform;
 
     public Game() {
-        mesh = ResourceLoader.loadMesh("torus.obj");
+        mesh = ResourceLoader.loadMesh("cube.obj");
         shader = new Shader();
+        camera = new Camera();
         transform = new Transform();
         transform.setProjection(75, Window.getWidth(), Window.getHeight(), 0.1f, 1000);
+        Transform.setCamera(camera);
         shader.addVertex(ResourceLoader.loadShader("basic.rvs"));
         shader.addFragment(ResourceLoader.loadShader("basic.rfs"));
         shader.compileShader();
@@ -34,6 +37,7 @@ public class Game {
     }
 
     public void input() {
+        camera.input();
     }
 
     float tmp;

@@ -84,6 +84,17 @@ public class Matrix4f {
         return this;
     }
 
+    public Matrix4f initCamera(Vector3f forward, Vector3f up) {
+        Vector3f f = forward.normalize();
+        Vector3f r = up.normalize().cross(f);
+        Vector3f u = f.cross(r);
+        matrix[0][0] = r.getX(); matrix[0][1] = r.getY(); matrix[0][2] = r.getZ(); matrix[0][3] = 0;
+        matrix[1][0] = u.getX(); matrix[1][1] = u.getY(); matrix[1][2] = u.getZ(); matrix[1][3] = 0;
+        matrix[2][0] = f.getX(); matrix[2][1] = f.getY(); matrix[2][2] = f.getZ(); matrix[2][3] = 0;
+        matrix[3][0] = 0; matrix[3][1] = 0; matrix[3][2] = 0; matrix[3][3] = 1;
+        return this;
+    }
+
     public Matrix4f mul(Matrix4f matrix) {
         Matrix4f result = new Matrix4f();
         for(int x = 0; x < 4; x++)

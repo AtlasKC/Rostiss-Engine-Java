@@ -17,6 +17,7 @@ package org.rostiss.engine;
  */
 public class Transform {
 
+    private static Camera camera;
     private static float zNear, zFar, width, height, fov;
 
     private Vector3f translation;
@@ -39,7 +40,9 @@ public class Transform {
     public Matrix4f getProjectedTransformation() {
         Matrix4f transformation = getTransformation();
         Matrix4f projection = new Matrix4f().initProjection(fov, width, height, zNear, zFar);
-        return projection.mul(transformation);
+        Matrix4f cameraRotation = new Matrix4f().initCamera(camera.getForward(), camera.getUp());
+        Matrix4f cameraTranslation = new Matrix4f().initTranslation(-camera.getPosition().getX(), -camera.getPosition().getY(), -camera.getPosition().getZ());
+        return projection.mul(cameraRotation.mul(cameraTranslation.mul(transformation)));
     }
 
     public void setProjection(float fov, float width, float height, float zNear, float zFar) {
@@ -48,6 +51,14 @@ public class Transform {
         Transform.height = height;
         Transform.zNear = zNear;
         Transform.zFar = zFar;
+    }
+
+    public static Camera getCamera() {
+        return camera;
+    }
+
+    public static void setCamera(Camera camera) {
+        Transform.camera = camera;
     }
 
     public Vector3f getTranslation() {
