@@ -38,6 +38,8 @@ public class Util {
             result.put(vertex.getPosition().getX());
             result.put(vertex.getPosition().getY());
             result.put(vertex.getPosition().getZ());
+            result.put(vertex.getTextureCoordinate().getX());
+            result.put(vertex.getTextureCoordinate().getY());
         }
         result.flip();
         return result;

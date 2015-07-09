@@ -21,12 +21,14 @@ public class Game {
     private Mesh mesh;
     private Shader shader;
     private Camera camera;
+    private Texture texture;
     private Transform transform;
 
     public Game() {
         mesh = ResourceLoader.loadMesh("cube.obj");
         shader = new Shader();
         camera = new Camera();
+        texture = ResourceLoader.loadTexture("test.png");
         transform = new Transform();
         transform.setProjection(75, Window.getWidth(), Window.getHeight(), 0.1f, 1000);
         Transform.setCamera(camera);
@@ -53,6 +55,7 @@ public class Game {
     public void render() {
         shader.bind();
         shader.setUniform4f("transform", transform.getProjectedTransformation());
+        texture.bind();
         mesh.draw();
     }
 }

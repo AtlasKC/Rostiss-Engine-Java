@@ -27,7 +27,15 @@ public class RenderUtil {
         glCullFace(GL_BACK);
         glEnable(GL_CULL_FACE);
         glEnable(GL_DEPTH_TEST);
+        enableTextures(true);
         glEnable(GL_FRAMEBUFFER_SRGB);
+    }
+
+    public static void enableTextures(boolean enabled) {
+        if(enabled)
+            glEnable(GL_TEXTURE_2D);
+        else
+            glDisable(GL_TEXTURE_2D);
     }
 
     public static void clearScreen() {

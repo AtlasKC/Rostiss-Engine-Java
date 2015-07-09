@@ -1,8 +1,8 @@
 package org.rostiss.engine;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import org.newdawn.slick.opengl.TextureLoader;
+
+import java.io.*;
 import java.util.ArrayList;
 
 /**
@@ -80,7 +80,20 @@ public class ResourceLoader {
             return result;
         } catch(Exception e) {
             e.printStackTrace();
-            System.exit(1);
+            System.exit(-1);
+        }
+        return null;
+    }
+
+    public static Texture loadTexture(String file) {
+        String[] splitArray = file.split("\\.");
+        String ext = splitArray[splitArray.length - 1];
+        try {
+            int id = TextureLoader.getTexture(ext, new FileInputStream(new File("./res/textures/" + file))).getTextureID();
+            return new Texture(id);
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.exit(-1);
         }
         return null;
     }
