@@ -26,8 +26,9 @@ public class Game {
         mesh = new Mesh();
         shader = new Shader();
         transform = new Transform();
-        Vertex[] data = new Vertex[] { new Vertex(new Vector3f(-1, -1, 0)), new Vertex(new Vector3f(0, 1, 0)), new Vertex(new Vector3f(1, -1, 0)) };
-        mesh.addVertices(data);
+        Vertex[] vertices = new Vertex[] { new Vertex(new Vector3f(-1, -1, 0)), new Vertex(new Vector3f(0, 1, 0)), new Vertex(new Vector3f(1, -1, 0)), new Vertex(new Vector3f(0, -1, 1)) };
+        int[] indices = new int[] { 0, 1, 3, 3, 1, 2, 2, 1, 0, 0, 2, 3 };
+        mesh.addVertices(vertices, indices);
         shader.addVertex(ResourceLoader.loadShader("basic.rvs"));
         shader.addFragment(ResourceLoader.loadShader("basic.rfs"));
         shader.compileShader();
@@ -41,7 +42,7 @@ public class Game {
     public void update() {
         tmp += Time.getDelta();
         transform.setTranslation((float)Math.sin(tmp), (float)Math.cos(tmp), 0);
-        transform.setRotation(0, 0, (float) Math.sin(tmp) * 360);
+        transform.setRotation(0, (float) Math.sin(tmp) * 360, 0);
         transform.setScale((float)Math.sin(tmp), (float)Math.sin(tmp), (float)Math.sin(tmp));
     }
 

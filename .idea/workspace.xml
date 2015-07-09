@@ -6,12 +6,14 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e128396e-e405-4411-a432-05532a9044a3" name="Default" comment="Day 5 - Added support for uniform variables.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/rostiss/engine/Transform.java" />
+    <list default="true" id="e128396e-e405-4411-a432-05532a9044a3" name="Default" comment="Day 6 - Added Transform class and helper methods in Matrix4f class.">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/Game.class" afterPath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/Game.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/Matrix4f.class" afterPath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/Matrix4f.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/Mesh.class" afterPath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/Mesh.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/Util.class" afterPath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/Util.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/rostiss/engine/Game.java" afterPath="$PROJECT_DIR$/src/org/rostiss/engine/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/rostiss/engine/Matrix4f.java" afterPath="$PROJECT_DIR$/src/org/rostiss/engine/Matrix4f.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/rostiss/engine/Mesh.java" afterPath="$PROJECT_DIR$/src/org/rostiss/engine/Mesh.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/rostiss/engine/Util.java" afterPath="$PROJECT_DIR$/src/org/rostiss/engine/Util.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/shaders/basic.rvs" afterPath="$PROJECT_DIR$/res/shaders/basic.rvs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -38,61 +40,36 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6682927">
-              <caret line="44" column="58" selection-start-line="44" selection-start-column="58" selection-end-line="44" selection-end-column="58" />
+            <state vertical-scroll-proportion="0.17073171">
+              <caret line="29" column="54" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Transform.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Transform.java">
+      <file leaf-file-name="Mesh.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Mesh.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
+              <caret line="45" column="63" selection-start-line="45" selection-start-column="63" selection-end-line="45" selection-end-column="63" />
               <folding>
-                <element signature="e#1515#1516#0" expanded="true" />
-                <element signature="e#1549#1550#0" expanded="true" />
-                <element signature="e#1605#1606#0" expanded="true" />
-                <element signature="e#1651#1652#0" expanded="true" />
-                <element signature="e#1712#1713#0" expanded="true" />
-                <element signature="e#1768#1769#0" expanded="true" />
-                <element signature="e#1805#1806#0" expanded="true" />
-                <element signature="e#1836#1837#0" expanded="true" />
-                <element signature="e#1886#1887#0" expanded="true" />
-                <element signature="e#1926#1927#0" expanded="true" />
-                <element signature="e#1984#1985#0" expanded="true" />
-                <element signature="e#2037#2038#0" expanded="true" />
-                <element signature="e#2071#2072#0" expanded="true" />
-                <element signature="e#2099#2100#0" expanded="true" />
-                <element signature="e#2143#2144#0" expanded="true" />
-                <element signature="e#2177#2178#0" expanded="true" />
-                <element signature="e#2232#2233#0" expanded="true" />
-                <element signature="e#2282#2283#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Matrix4f.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Matrix4f.java">
+      <file leaf-file-name="Util.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Util.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="71" column="78" selection-start-line="71" selection-start-column="78" selection-end-line="71" selection-end-column="78" />
+              <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
               <folding>
-                <element signature="e#4373#4374#0" expanded="true" />
-                <element signature="e#4408#4409#0" expanded="true" />
+                <element signature="e#875#876#0" expanded="true" />
+                <element signature="e#933#934#0" expanded="true" />
+                <element signature="e#990#991#0" expanded="true" />
+                <element signature="e#1046#1047#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="basic.rvs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/shaders/basic.rvs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -132,15 +109,15 @@
         <option value="$PROJECT_DIR$/src/org/rostiss/engine/Vertex.java" />
         <option value="$PROJECT_DIR$/src/org/rostiss/engine/Window.java" />
         <option value="$PROJECT_DIR$/src/org/rostiss/engine/ResourceLoader.java" />
-        <option value="$PROJECT_DIR$/src/org/rostiss/engine/RenderUtil.java" />
         <option value="$PROJECT_DIR$/src/org/rostiss/engine/MainComponent.java" />
-        <option value="$PROJECT_DIR$/src/org/rostiss/engine/Mesh.java" />
         <option value="$PROJECT_DIR$/res/shaders/basic.rfs" />
         <option value="$PROJECT_DIR$/src/org/rostiss/engine/Shader.java" />
-        <option value="$PROJECT_DIR$/src/org/rostiss/engine/Util.java" />
         <option value="$PROJECT_DIR$/src/org/rostiss/engine/Matrix4f.java" />
         <option value="$PROJECT_DIR$/res/shaders/basic.rvs" />
         <option value="$PROJECT_DIR$/src/org/rostiss/engine/Transform.java" />
+        <option value="$PROJECT_DIR$/src/org/rostiss/engine/Util.java" />
+        <option value="$PROJECT_DIR$/src/org/rostiss/engine/Mesh.java" />
+        <option value="$PROJECT_DIR$/src/org/rostiss/engine/RenderUtil.java" />
         <option value="$PROJECT_DIR$/src/org/rostiss/engine/Game.java" />
       </list>
     </option>
@@ -780,7 +757,7 @@
       <workItem from="1436371026408" duration="3521000" />
       <workItem from="1436383226398" duration="84000" />
       <workItem from="1436383402900" duration="10451000" />
-      <workItem from="1436395607307" duration="7625000" />
+      <workItem from="1436395607307" duration="8410000" />
     </task>
     <task id="LOCAL-00001" summary="Day 1 - Implemented basic static Window class using GLFW as well as a preliminary game loop and timing system in the MainComponent class.">
       <created>1436246850007</created>
@@ -818,11 +795,17 @@
       <option name="project" value="LOCAL" />
       <updated>1436402971762</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Day 6 - Added Transform class and helper methods in Matrix4f class.">
+      <created>1436406126552</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1436406126552</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41920000" />
+    <option name="totallyTimeSpent" value="42705000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -873,7 +856,8 @@
     <MESSAGE value="Day 4 Pt. 2 - Added shader class and basic shaders." />
     <MESSAGE value="Day 4 Pt. 3 - Fixed a stupid error in Mesh class -.-" />
     <MESSAGE value="Day 5 - Added support for uniform variables." />
-    <option name="LAST_COMMIT_MESSAGE" value="Day 5 - Added support for uniform variables." />
+    <MESSAGE value="Day 6 - Added Transform class and helper methods in Matrix4f class." />
+    <option name="LAST_COMMIT_MESSAGE" value="Day 6 - Added Transform class and helper methods in Matrix4f class." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1040,17 +1024,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/RenderUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
-          <folding>
-            <element signature="e#1234#1235#0" expanded="true" />
-            <element signature="e#1280#1281#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/ResourceLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1086,28 +1059,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Mesh.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2203673">
-          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/shaders/basic.rfs">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -1120,28 +1075,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/shaders/basic.rvs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Matrix4f.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="71" column="78" selection-start-line="71" selection-start-column="78" selection-end-line="71" selection-end-column="78" />
-          <folding>
-            <element signature="e#4373#4374#0" expanded="true" />
-            <element signature="e#4408#4409#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Transform.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.47479674">
           <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
           <folding>
             <element signature="e#1515#1516#0" expanded="true" />
@@ -1166,10 +1102,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Matrix4f.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8569106">
+          <caret line="71" column="78" selection-start-line="71" selection-start-column="78" selection-end-line="71" selection-end-column="78" />
+          <folding>
+            <element signature="e#4373#4374#0" expanded="true" />
+            <element signature="e#4408#4409#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/shaders/basic.rvs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22113821">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+          <folding>
+            <element signature="e#875#876#0" expanded="true" />
+            <element signature="e#933#934#0" expanded="true" />
+            <element signature="e#990#991#0" expanded="true" />
+            <element signature="e#1046#1047#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/RenderUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5577236">
+          <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Mesh.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="63" selection-start-line="45" selection-start-column="63" selection-end-line="45" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6682927">
-          <caret line="44" column="58" selection-start-line="44" selection-start-column="58" selection-end-line="44" selection-end-column="58" />
+        <state vertical-scroll-proportion="0.17073171">
+          <caret line="29" column="54" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
           <folding />
         </state>
       </provider>

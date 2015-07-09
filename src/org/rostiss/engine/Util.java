@@ -3,6 +3,7 @@ package org.rostiss.engine;
 import org.lwjgl.BufferUtils;
 
 import java.nio.FloatBuffer;
+import java.nio.IntBuffer;
 
 /**
  * File: Util.java
@@ -26,6 +27,10 @@ public class Util {
         return BufferUtils.createFloatBuffer(size);
     }
 
+    public static IntBuffer createIntBuffer(int size) {
+        return BufferUtils.createIntBuffer(size);
+    }
+
     public static FloatBuffer createFlippedBuffer(Vertex[] vertices) {
         FloatBuffer result = createFloatBuffer(vertices.length * Vertex.SIZE);
         for(int i = 0; i < vertices.length; i++) {
@@ -33,6 +38,13 @@ public class Util {
             result.put(vertices[i].getPosition().getY());
             result.put(vertices[i].getPosition().getZ());
         }
+        result.flip();
+        return result;
+    }
+
+    public static IntBuffer createFlippedBuffer(int[] indices) {
+        IntBuffer result = createIntBuffer(indices.length);
+        result.put(indices);
         result.flip();
         return result;
     }
