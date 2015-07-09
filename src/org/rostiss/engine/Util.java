@@ -39,8 +39,8 @@ public class Util {
 
     public static FloatBuffer createFlippedBuffer(Matrix4f matrix) {
         FloatBuffer result = createFloatBuffer(16);
-        for(int x = 0; x < 16; x++)
-            for(int y = 0; y < 16; y++)
+        for(int x = 0; x < 4; x++)
+            for(int y = 0; y < 4; y++)
                 result.put(matrix.getValue(x, y));
         result.flip();
         return result;
