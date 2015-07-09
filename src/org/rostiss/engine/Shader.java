@@ -45,6 +45,8 @@ public class Shader {
         uniforms.put(name, location);
     }
 
+    public void updateUniforms(Matrix4f world, Matrix4f projected, Material material) {}
+
     public void setUniform1i(String name, int value) {
         glUniform1i(uniforms.get(name), value);
     }

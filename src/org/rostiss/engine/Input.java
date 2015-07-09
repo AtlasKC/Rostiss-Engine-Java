@@ -196,6 +196,8 @@ public class Input {
         return new Vector2f(Mouse.getX(), Mouse.getY());
     }
 
+    public static void setMousePosition(Vector2f position) { Mouse.setCursorPosition((int)position.getX(), (int)position.getY()); }
+
     public static void setCursorEnabled(boolean enabled) {
         Mouse.setGrabbed(!enabled);
     }

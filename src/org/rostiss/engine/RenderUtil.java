@@ -22,7 +22,7 @@ import static org.lwjgl.opengl.GL30.GL_FRAMEBUFFER_SRGB;
 public class RenderUtil {
 
     public static void init() {
-        glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
+        setClearColor(new Vector3f(0.1f, 0.1f, 0.1f));
         glFrontFace(GL_CW);
         glCullFace(GL_BACK);
         glEnable(GL_CULL_FACE);
@@ -36,6 +36,14 @@ public class RenderUtil {
             glEnable(GL_TEXTURE_2D);
         else
             glDisable(GL_TEXTURE_2D);
+    }
+
+    public static void unbindTextures() {
+        glBindTexture(GL_TEXTURE_2D, 0);
+    }
+
+    public static void setClearColor(Vector3f color) {
+        glClearColor(color.getX(), color.getY(), color.getZ(), 1);
     }
 
     public static void clearScreen() {

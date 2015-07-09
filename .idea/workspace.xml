@@ -1,39 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
       <artifact name="Rostiss Engine Java:jar" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e128396e-e405-4411-a432-05532a9044a3" name="Default" comment="Day 8 - Improved the crappy OBJ loader and added a simple 3D Camera class.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/rostiss/engine/Texture.java" />
-      <change type="DELETED" beforePath="C:\Users\atlas\IdeaProjects\Rostiss-Engine-Java\lib\native\linux\libjinput-linux.so" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\atlas\IdeaProjects\Rostiss-Engine-Java\lib\native\linux\libjinput-linux64.so" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\atlas\IdeaProjects\Rostiss-Engine-Java\lib\native\linux\liblwjgl.so" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\atlas\IdeaProjects\Rostiss-Engine-Java\lib\native\linux\liblwjgl64.so" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\atlas\IdeaProjects\Rostiss-Engine-Java\lib\native\linux\libopenal.so" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\atlas\IdeaProjects\Rostiss-Engine-Java\lib\native\linux\libopenal64.so" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\atlas\IdeaProjects\Rostiss-Engine-Java\lib\native\macosx\libjinput-osx.dylib" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\atlas\IdeaProjects\Rostiss-Engine-Java\lib\native\macosx\liblwjgl.dylib" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\atlas\IdeaProjects\Rostiss-Engine-Java\lib\native\macosx\openal.dylib" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\atlas\IdeaProjects\Rostiss-Engine-Java\lib\native\windows\OpenAL32.dll" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\atlas\IdeaProjects\Rostiss-Engine-Java\lib\native\windows\OpenAL64.dll" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\atlas\IdeaProjects\Rostiss-Engine-Java\lib\native\windows\jinput-dx8.dll" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\atlas\IdeaProjects\Rostiss-Engine-Java\lib\native\windows\jinput-dx8_64.dll" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\atlas\IdeaProjects\Rostiss-Engine-Java\lib\native\windows\jinput-raw.dll" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\atlas\IdeaProjects\Rostiss-Engine-Java\lib\native\windows\jinput-raw_64.dll" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\atlas\IdeaProjects\Rostiss-Engine-Java\lib\native\windows\lwjgl.dll" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\atlas\IdeaProjects\Rostiss-Engine-Java\lib\native\windows\lwjgl64.dll" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Rostiss_Engine_Java_jar/Rostiss.jar" afterPath="$PROJECT_DIR$/out/artifacts/Rostiss_Engine_Java_jar/Rostiss.jar" />
+    <list default="true" id="e128396e-e405-4411-a432-05532a9044a3" name="Default" comment="Day 9 Pt. 1 - Added basic texture support.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/rostiss/engine/BasicShader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/rostiss/engine/Material.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/rostiss/engine/PhongShader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/atlas.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/Game.class" afterPath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/Game.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/Input.class" afterPath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/Input.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/Matrix4f.class" afterPath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/Matrix4f.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/Mesh.class" afterPath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/Mesh.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/RenderUtil.class" afterPath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/RenderUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/ResourceLoader.class" afterPath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/ResourceLoader.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/Shader.class" afterPath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/Shader.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/Util.class" afterPath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/Util.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/Vector2f.class" afterPath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/Vector2f.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/Vector3f.class" afterPath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/Vector3f.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/Vertex.class" afterPath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/Vertex.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/rostiss/engine/Camera.java" afterPath="$PROJECT_DIR$/src/org/rostiss/engine/Camera.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/rostiss/engine/Game.java" afterPath="$PROJECT_DIR$/src/org/rostiss/engine/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/rostiss/engine/Mesh.java" afterPath="$PROJECT_DIR$/src/org/rostiss/engine/Mesh.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/rostiss/engine/Input.java" afterPath="$PROJECT_DIR$/src/org/rostiss/engine/Input.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/rostiss/engine/Matrix4f.java" afterPath="$PROJECT_DIR$/src/org/rostiss/engine/Matrix4f.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/rostiss/engine/RenderUtil.java" afterPath="$PROJECT_DIR$/src/org/rostiss/engine/RenderUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/rostiss/engine/ResourceLoader.java" afterPath="$PROJECT_DIR$/src/org/rostiss/engine/ResourceLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/rostiss/engine/Util.java" afterPath="$PROJECT_DIR$/src/org/rostiss/engine/Util.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/rostiss/engine/Vertex.java" afterPath="$PROJECT_DIR$/src/org/rostiss/engine/Vertex.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Rostiss_Engine_Java_jar.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Rostiss_Engine_Java_jar.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/rostiss/engine/Shader.java" afterPath="$PROJECT_DIR$/src/org/rostiss/engine/Shader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/rostiss/engine/Vector2f.java" afterPath="$PROJECT_DIR$/src/org/rostiss/engine/Vector2f.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/rostiss/engine/Vector3f.java" afterPath="$PROJECT_DIR$/src/org/rostiss/engine/Vector3f.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/shaders/basic.rfs" afterPath="$PROJECT_DIR$/res/shaders/basic.rfs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/shaders/basic.rvs" afterPath="$PROJECT_DIR$/res/shaders/basic.rvs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -56,7 +57,28 @@
     <favorites_list name="Rostiss Engine Java" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Game.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.22601625">
+              <caret line="30" column="68" selection-start-line="30" selection-start-column="68" selection-end-line="30" selection-end-column="68" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PhongShader.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/PhongShader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="24" column="52" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -83,28 +105,31 @@
       <list>
         <option value="$PROJECT_DIR$/src/org/rostiss/engine/Main.java" />
         <option value="$PROJECT_DIR$/src/org/rostiss/engine/Time.java" />
-        <option value="$PROJECT_DIR$/src/org/rostiss/engine/Input.java" />
-        <option value="$PROJECT_DIR$/src/org/rostiss/engine/Vector2f.java" />
         <option value="$PROJECT_DIR$/src/org/rostiss/engine/Vector4f.java" />
         <option value="$PROJECT_DIR$/src/org/rostiss/engine/Quaternion.java" />
         <option value="$PROJECT_DIR$/src/org/rostiss/engine/Window.java" />
         <option value="$PROJECT_DIR$/src/org/rostiss/engine/MainComponent.java" />
         <option value="$PROJECT_DIR$/res/models/cube.obj" />
-        <option value="$PROJECT_DIR$/src/org/rostiss/engine/Shader.java" />
         <option value="$PROJECT_DIR$/res/models/torus.obj" />
-        <option value="$PROJECT_DIR$/src/org/rostiss/engine/Vector3f.java" />
-        <option value="$PROJECT_DIR$/src/org/rostiss/engine/Matrix4f.java" />
-        <option value="$PROJECT_DIR$/src/org/rostiss/engine/Camera.java" />
         <option value="$PROJECT_DIR$/src/org/rostiss/engine/Transform.java" />
         <option value="$PROJECT_DIR$/src/org/rostiss/engine/Texture.java" />
-        <option value="$PROJECT_DIR$/src/org/rostiss/engine/RenderUtil.java" />
         <option value="$PROJECT_DIR$/src/org/rostiss/engine/ResourceLoader.java" />
         <option value="$PROJECT_DIR$/src/org/rostiss/engine/Vertex.java" />
         <option value="$PROJECT_DIR$/src/org/rostiss/engine/Util.java" />
         <option value="$PROJECT_DIR$/src/org/rostiss/engine/Mesh.java" />
-        <option value="$PROJECT_DIR$/src/org/rostiss/engine/Game.java" />
         <option value="$PROJECT_DIR$/res/shaders/basic.rvs" />
+        <option value="$PROJECT_DIR$/src/org/rostiss/engine/Input.java" />
+        <option value="$PROJECT_DIR$/src/org/rostiss/engine/Vector3f.java" />
+        <option value="$PROJECT_DIR$/src/org/rostiss/engine/Vector2f.java" />
+        <option value="$PROJECT_DIR$/src/org/rostiss/engine/Camera.java" />
+        <option value="$PROJECT_DIR$/src/org/rostiss/engine/Matrix4f.java" />
+        <option value="$PROJECT_DIR$/src/org/rostiss/engine/Shader.java" />
+        <option value="$PROJECT_DIR$/src/org/rostiss/engine/RenderUtil.java" />
+        <option value="$PROJECT_DIR$/src/org/rostiss/engine/Material.java" />
         <option value="$PROJECT_DIR$/res/shaders/basic.rfs" />
+        <option value="$PROJECT_DIR$/src/org/rostiss/engine/BasicShader.java" />
+        <option value="$PROJECT_DIR$/src/org/rostiss/engine/PhongShader.java" />
+        <option value="$PROJECT_DIR$/src/org/rostiss/engine/Game.java" />
       </list>
     </option>
   </component>
@@ -758,7 +783,7 @@
       <workItem from="1436383226398" duration="84000" />
       <workItem from="1436383402900" duration="10451000" />
       <workItem from="1436395607307" duration="20703000" />
-      <workItem from="1436453890227" duration="2058000" />
+      <workItem from="1436453890227" duration="6550000" />
     </task>
     <task id="LOCAL-00001" summary="Day 1 - Implemented basic static Window class using GLFW as well as a preliminary game loop and timing system in the MainComponent class.">
       <created>1436246850007</created>
@@ -826,15 +851,21 @@
       <option name="project" value="LOCAL" />
       <updated>1436419374834</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Day 9 Pt. 1 - Added basic texture support.">
+      <created>1436456016362</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1436456016362</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57056000" />
+    <option name="totallyTimeSpent" value="61548000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -843,12 +874,14 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39915523" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32101372" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14166667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14166667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -857,9 +890,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39915523" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -886,12 +917,13 @@
     <MESSAGE value="Day 7 Pt. 2 - Buggy, temporary obj loader." />
     <MESSAGE value="Day 7 Pt. 3 - Cleanup, fixed a bug with IBO's in Mesh class." />
     <MESSAGE value="Day 8 - Improved the crappy OBJ loader and added a simple 3D Camera class." />
-    <option name="LAST_COMMIT_MESSAGE" value="Day 8 - Improved the crappy OBJ loader and added a simple 3D Camera class." />
+    <MESSAGE value="Day 9 Pt. 1 - Added basic texture support." />
+    <option name="LAST_COMMIT_MESSAGE" value="Day 9 Pt. 1 - Added basic texture support." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -905,8 +937,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
           <folding>
-            <element signature="e#1460#1461#0" expanded="true" />
-            <element signature="e#1490#1491#0" expanded="true" />
+            <element signature="e#1308#1309#0" expanded="true" />
+            <element signature="e#1338#1339#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -916,8 +948,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
           <folding>
-            <element signature="e#866#867#0" expanded="true" />
-            <element signature="e#955#956#0" expanded="true" />
+            <element signature="e#922#923#0" expanded="false" />
+            <element signature="e#1011#1012#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -951,8 +983,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1460#1461#0" expanded="true" />
-            <element signature="e#1490#1491#0" expanded="true" />
+            <element signature="e#1308#1309#0" expanded="true" />
+            <element signature="e#1338#1339#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1018,8 +1050,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
           <folding>
-            <element signature="e#1460#1461#0" expanded="true" />
-            <element signature="e#1490#1491#0" expanded="true" />
+            <element signature="e#1308#1309#0" expanded="true" />
+            <element signature="e#1338#1339#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1064,21 +1096,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.60764587">
           <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Vector2f.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2188329">
-          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Input.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8297162">
-          <caret line="201" column="1" selection-start-line="201" selection-start-column="1" selection-end-line="201" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1128,6 +1145,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.29268292">
           <caret line="104" column="4" selection-start-line="104" selection-start-column="4" selection-end-line="104" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1152,53 +1170,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Shader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5804878">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Vector3f.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="66" column="20" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Matrix4f.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="94" column="20" selection-start-line="94" selection-start-column="20" selection-end-line="94" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Camera.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
-          <folding>
-            <element signature="e#866#867#0" expanded="true" />
-            <element signature="e#955#956#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Transform.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/RenderUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -1216,23 +1191,12 @@
         <state vertical-scroll-proportion="0.74634147">
           <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
           <folding>
-            <element signature="e#825#826#0" expanded="true" />
-            <element signature="e#853#854#0" expanded="true" />
-            <element signature="e#879#880#0" expanded="true" />
-            <element signature="e#927#928#0" expanded="true" />
-            <element signature="e#953#954#0" expanded="true" />
-            <element signature="e#978#979#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6682927">
-          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
-          <folding>
-            <element signature="e#1460#1461#0" expanded="true" />
-            <element signature="e#1490#1491#0" expanded="true" />
+            <element signature="e#888#889#0" expanded="true" />
+            <element signature="e#916#917#0" expanded="true" />
+            <element signature="e#942#943#0" expanded="true" />
+            <element signature="e#990#991#0" expanded="true" />
+            <element signature="e#1016#1017#0" expanded="true" />
+            <element signature="e#1041#1042#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1252,22 +1216,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/shaders/basic.rfs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="52" selection-start-line="40" selection-start-column="52" selection-end-line="40" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Mesh.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.44715446">
@@ -1276,10 +1224,194 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Input.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8341463">
+          <caret line="199" column="0" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
+          <folding>
+            <element signature="e#7063#7064#0" expanded="true" />
+            <element signature="e#7109#7110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Vector3f.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.3723576">
+          <caret line="122" column="1" selection-start-line="122" selection-start-column="1" selection-end-line="122" selection-end-column="1" />
+          <folding>
+            <element signature="e#940#941#0" expanded="true" />
+            <element signature="e#997#998#0" expanded="true" />
+            <element signature="e#1038#1039#0" expanded="true" />
+            <element signature="e#1118#1119#0" expanded="true" />
+            <element signature="e#2283#2284#0" expanded="true" />
+            <element signature="e#2351#2352#0" expanded="true" />
+            <element signature="e#2527#2528#0" expanded="true" />
+            <element signature="e#2595#2596#0" expanded="true" />
+            <element signature="e#2771#2772#0" expanded="true" />
+            <element signature="e#2839#2840#0" expanded="true" />
+            <element signature="e#3015#3016#0" expanded="true" />
+            <element signature="e#3083#3084#0" expanded="true" />
+            <element signature="e#3112#3113#0" expanded="true" />
+            <element signature="e#3186#3187#0" expanded="true" />
+            <element signature="e#3213#3214#0" expanded="true" />
+            <element signature="e#3237#3238#0" expanded="true" />
+            <element signature="e#3270#3271#0" expanded="true" />
+            <element signature="e#3296#3297#0" expanded="true" />
+            <element signature="e#3323#3324#0" expanded="true" />
+            <element signature="e#3347#3348#0" expanded="true" />
+            <element signature="e#3380#3381#0" expanded="true" />
+            <element signature="e#3406#3407#0" expanded="true" />
+            <element signature="e#3433#3434#0" expanded="true" />
+            <element signature="e#3457#3458#0" expanded="true" />
+            <element signature="e#3490#3491#0" expanded="true" />
+            <element signature="e#3516#3517#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Vector2f.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.07479675">
+          <caret line="37" column="30" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
+          <folding>
+            <element signature="e#909#910#0" expanded="true" />
+            <element signature="e#958#959#0" expanded="true" />
+            <element signature="e#999#1000#0" expanded="true" />
+            <element signature="e#1059#1060#0" expanded="true" />
+            <element signature="e#1476#1477#0" expanded="true" />
+            <element signature="e#1549#1550#0" expanded="true" />
+            <element signature="e#1589#1590#0" expanded="true" />
+            <element signature="e#1646#1647#0" expanded="true" />
+            <element signature="e#1690#1691#0" expanded="true" />
+            <element signature="e#1763#1764#0" expanded="true" />
+            <element signature="e#1803#1804#0" expanded="true" />
+            <element signature="e#1860#1861#0" expanded="true" />
+            <element signature="e#1904#1905#0" expanded="true" />
+            <element signature="e#1977#1978#0" expanded="true" />
+            <element signature="e#2017#2018#0" expanded="true" />
+            <element signature="e#2074#2075#0" expanded="true" />
+            <element signature="e#2118#2119#0" expanded="true" />
+            <element signature="e#2191#2192#0" expanded="true" />
+            <element signature="e#2231#2232#0" expanded="true" />
+            <element signature="e#2288#2289#0" expanded="true" />
+            <element signature="e#2317#2318#0" expanded="true" />
+            <element signature="e#2378#2379#0" expanded="true" />
+            <element signature="e#2405#2406#0" expanded="true" />
+            <element signature="e#2429#2430#0" expanded="true" />
+            <element signature="e#2462#2463#0" expanded="true" />
+            <element signature="e#2488#2489#0" expanded="true" />
+            <element signature="e#2515#2516#0" expanded="true" />
+            <element signature="e#2539#2540#0" expanded="true" />
+            <element signature="e#2572#2573#0" expanded="true" />
+            <element signature="e#2598#2599#0" expanded="true" />
+            <element signature="e#2630#2631#0" expanded="true" />
+            <element signature="e#2687#2688#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Matrix4f.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8569106">
+          <caret line="111" column="5" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Camera.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35934958">
+          <caret line="72" column="51" selection-start-line="72" selection-start-column="51" selection-end-line="72" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30406505">
+          <caret line="47" column="54" selection-start-line="47" selection-start-column="54" selection-end-line="47" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/res/shaders/basic.rvs">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13821138">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/shaders/basic.rfs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30406505">
+          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/BasicShader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22601625">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="42" selection-end-column="5" />
+          <folding>
+            <element signature="e#1462#1463#0" expanded="true" />
+            <element signature="e#1493#1494#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/RenderUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.69593495">
+          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+          <folding>
+            <element signature="e#1335#1336#0" expanded="true" />
+            <element signature="e#1382#1383#0" expanded="true" />
+            <element signature="e#1664#1665#0" expanded="true" />
+            <element signature="e#1710#1711#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Shader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08292683">
+          <caret line="47" column="84" selection-start-line="47" selection-start-column="84" selection-end-line="47" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Material.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8894309">
+          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+          <folding>
+            <element signature="e#950#951#0" expanded="true" />
+            <element signature="e#980#981#0" expanded="true" />
+            <element signature="e#1027#1028#0" expanded="true" />
+            <element signature="e#1065#1066#0" expanded="true" />
+            <element signature="e#1099#1100#0" expanded="true" />
+            <element signature="e#1127#1128#0" expanded="true" />
+            <element signature="e#1171#1172#0" expanded="true" />
+            <element signature="e#1205#1206#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/PhongShader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="52" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22601625">
+          <caret line="30" column="68" selection-start-line="30" selection-start-column="68" selection-end-line="30" selection-end-column="68" />
           <folding />
         </state>
       </provider>

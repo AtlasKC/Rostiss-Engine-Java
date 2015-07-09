@@ -19,23 +19,20 @@ package org.rostiss.engine;
 public class Game {
 
     private Mesh mesh;
-    private Shader shader;
     private Camera camera;
-    private Texture texture;
+    private Shader shader;
+    private Material material;
     private Transform transform;
 
     public Game() {
         mesh = ResourceLoader.loadMesh("cube.obj");
-        shader = new Shader();
         camera = new Camera();
-        texture = ResourceLoader.loadTexture("test.png");
+        shader = PhongShader.getInstance();
+        material = new Material(ResourceLoader.loadTexture("test.png"), new Vector3f(1, 0, 0));
         transform = new Transform();
         transform.setProjection(75, Window.getWidth(), Window.getHeight(), 0.1f, 1000);
         Transform.setCamera(camera);
-        shader.addVertex(ResourceLoader.loadShader("basic.rvs"));
-        shader.addFragment(ResourceLoader.loadShader("basic.rfs"));
-        shader.compileShader();
-        shader.addUniform("transform");
+
     }
 
     public void input() {
@@ -54,8 +51,7 @@ public class Game {
 
     public void render() {
         shader.bind();
-        shader.setUniform4f("transform", transform.getProjectedTransformation());
-        texture.bind();
+        shader.updateUniforms(transform.getTransformation(), transform.getProjectedTransformation(), material);
         mesh.draw();
     }
 }
