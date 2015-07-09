@@ -43,7 +43,7 @@ public class Util {
         return result;
     }
 
-    public static IntBuffer createFlippedBuffer(int[] indices) {
+    public static IntBuffer createFlippedBuffer(int... indices) {
         IntBuffer result = createIntBuffer(indices.length);
         result.put(indices);
         result.flip();
@@ -59,27 +59,20 @@ public class Util {
         return result;
     }
 
-  	public static String[] removeEmptyStrings(String[] data)
-  	{
-      		ArrayList<String> result = new ArrayList<>();
-
-        for (String aData : data)
-            if (!aData.equals(""))
-                result.add(aData);
-      
-              		String[] res = new String[result.size()];
-      		result.toArray(res);
-      
-              		return res;
-      	}
+  	public static String[] removeEmptyStrings(String[] tokens) {
+        ArrayList<String> result = new ArrayList<>();
+        for (String token : tokens)
+            if (!token.equals(""))
+                result.add(token);
+        String[] res = new String[result.size()];
+        result.toArray(res);
+        return res;
+    }
   
-          	public static int[] toIntArray(Integer[] data)
-  	{
-      		int[] result = new int[data.length];
-      
-              		for(int i = 0; i < data.length; i++)
-          			result[i] = data[i];
-      
-              		return result;
-      	}
+    public static int[] toIntArray(Integer[] data) {
+        int[] result = new int[data.length];
+        for(int i = 0; i < data.length; i++)
+            result[i] = data[i];
+        return result;
+    }
 }

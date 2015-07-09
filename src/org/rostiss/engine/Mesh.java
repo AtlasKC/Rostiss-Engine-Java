@@ -31,7 +31,7 @@ public class Mesh {
     }
 
     public void addVertices(Vertex[] vertices, int[] indices) {
-        size = vertices.length;
+        size = indices.length;
         glBindBuffer(GL_ARRAY_BUFFER, vbo);
         glBufferData(GL_ARRAY_BUFFER, Util.createFlippedBuffer(vertices), GL_STATIC_DRAW);
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo);

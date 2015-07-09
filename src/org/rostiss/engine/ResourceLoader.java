@@ -38,8 +38,8 @@ public class ResourceLoader {
         return shader.toString();
     }
 
-    public static Mesh loadMesh(String fileName) {
-        String[] splitArray = fileName.split("\\.");
+    public static Mesh loadMesh(String file) {
+        String[] splitArray = file.split("\\.");
         String ext = splitArray[splitArray.length - 1];
         if(!ext.equals("obj")) {
             System.err.println("Error: File format not supported for mesh data: " + ext);
@@ -50,18 +50,15 @@ public class ResourceLoader {
         ArrayList<Integer> indices = new ArrayList<>();
         BufferedReader meshReader;
         try {
-            meshReader = new BufferedReader(new FileReader("./res/models/" + fileName));
+            meshReader = new BufferedReader(new FileReader("./res/models/" + file));
             String line;
             while((line = meshReader.readLine()) != null) {
                 String[] tokens = line.split(" ");
                 tokens = Util.removeEmptyStrings(tokens);
                 if(tokens.length == 0 || tokens[0].equals("#"))
                     continue;
-                else if(tokens[0].equals("v")) {
-                    vertices.add(new Vertex(new Vector3f(Float.valueOf(tokens[1]),
-                                                                         Float.valueOf(tokens[2]),
-                                                                         Float.valueOf(tokens[3]))));
-                }
+                else if(tokens[0].equals("v"))
+                    vertices.add(new Vertex(new Vector3f(Float.valueOf(tokens[1]), Float.valueOf(tokens[2]), Float.valueOf(tokens[3]))));
                 else if(tokens[0].equals("f")) {
                     indices.add(Integer.parseInt(tokens[1]) - 1);
                     indices.add(Integer.parseInt(tokens[2]) - 1);
@@ -69,13 +66,13 @@ public class ResourceLoader {
                 }
             }
             meshReader.close();
-            Mesh res = new Mesh();
+            Mesh result = new Mesh();
             Vertex[] vertexData = new Vertex[vertices.size()];
             vertices.toArray(vertexData);
             Integer[] indexData = new Integer[indices.size()];
             indices.toArray(indexData);
-            res.addVertices(vertexData, Util.toIntArray(indexData));
-            return res;
+            result.addVertices(vertexData, Util.toIntArray(indexData));
+            return result;
         } catch(Exception e) {
             e.printStackTrace();
             System.exit(1);

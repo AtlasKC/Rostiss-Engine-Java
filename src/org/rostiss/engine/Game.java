@@ -23,9 +23,10 @@ public class Game {
     private Transform transform;
 
     public Game() {
-        mesh = ResourceLoader.loadMesh("ring.obj");
+        mesh = ResourceLoader.loadMesh("torus.obj");
         shader = new Shader();
         transform = new Transform();
+        transform.setProjection(75, Window.getWidth(), Window.getHeight(), 0.1f, 1000);
         shader.addVertex(ResourceLoader.loadShader("basic.rvs"));
         shader.addFragment(ResourceLoader.loadShader("basic.rfs"));
         shader.compileShader();
@@ -40,14 +41,14 @@ public class Game {
     public void update() {
         tmp += Time.getDelta();
         float SIN = (float) Math.sin(tmp);
-        transform.setTranslation(SIN, 0, 0);
+        transform.setTranslation(SIN, 0, 5);
         transform.setRotation(0, (float) Math.sin(tmp) * 180, 0);
-        transform.setScale(0.5f * (float) Math.sin(tmp), 0.5f * (float) Math.sin(tmp), 0.5f * (float) Math.sin(tmp));
+        //transform.setScale(0.5f * (float) Math.sin(tmp), 0.5f * (float) Math.sin(tmp), 0.5f * (float) Math.sin(tmp));
     }
 
     public void render() {
         shader.bind();
-        shader.setUniform4f("transform", transform.getTransformation());
+        shader.setUniform4f("transform", transform.getProjectedTransformation());
         mesh.draw();
     }
 }

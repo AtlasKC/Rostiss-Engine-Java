@@ -17,6 +17,8 @@ package org.rostiss.engine;
  */
 public class Transform {
 
+    private static float zNear, zFar, width, height, fov;
+
     private Vector3f translation;
     private Vector3f rotation;
     private Vector3f scale;
@@ -32,6 +34,20 @@ public class Transform {
         Matrix4f rotation = new Matrix4f().initRotation(this.rotation.getX(), this.rotation.getY(), this.rotation.getZ());
         Matrix4f scale = new Matrix4f().initScale(this.scale.getX(), this.scale.getY(), this.scale.getZ());
         return translation.mul(rotation.mul(scale));
+    }
+
+    public Matrix4f getProjectedTransformation() {
+        Matrix4f transformation = getTransformation();
+        Matrix4f projection = new Matrix4f().initProjection(fov, width, height, zNear, zFar);
+        return projection.mul(transformation);
+    }
+
+    public void setProjection(float fov, float width, float height, float zNear, float zFar) {
+        Transform.fov = fov;
+        Transform.width = width;
+        Transform.height = height;
+        Transform.zNear = zNear;
+        Transform.zFar = zFar;
     }
 
     public Vector3f getTranslation() {

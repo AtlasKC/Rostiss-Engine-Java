@@ -23,9 +23,9 @@ public class RenderUtil {
 
     public static void init() {
         glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
-        //glFrontFace(GL_CW);
-        //glCullFace(GL_BACK);
-        //glEnable(GL_CULL_FACE);
+        glFrontFace(GL_CW);
+        glCullFace(GL_BACK);
+        glEnable(GL_CULL_FACE);
         glEnable(GL_DEPTH_TEST);
         glEnable(GL_FRAMEBUFFER_SRGB);
     }
