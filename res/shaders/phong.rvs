@@ -6,12 +6,14 @@ layout (location = 2) in vec3 normals;
 
 out vec2 texCoord;
 out vec3 normal;
+out vec3 worldPosition;
 
 uniform mat4 transform;
 uniform mat4 projected;
 
 void main()
 {
+    worldPosition = (transform * vec4(position, 1)).xyz;
     gl_Position = projected * vec4(position, 1.0);
     texCoord = textureCoordinate;
     normal = (transform * vec4(normals, 0)).xyz;

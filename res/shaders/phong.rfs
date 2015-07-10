@@ -2,6 +2,7 @@
 
 in vec2 texCoord;
 in vec3 normal;
+in vec3 worldPosition;
 
 out vec4 fragColor;
 
@@ -19,16 +20,28 @@ struct DirectionalLight
 
 uniform vec3 baseColor;
 uniform vec3 ambientLight;
+uniform vec3 eyePosition;
 uniform DirectionalLight directionalLight;
+uniform float specularIntensity;
+uniform float specularExponent;
 uniform sampler2D sampler;
 
 vec4 calculateLight(BaseLight baseLight, vec3 direction, vec3 normal)
 {
     float diffuseFactor = dot(normal, -direction);
     vec4 diffuseColor = vec4(0, 0, 0, 0);
+    vec4 specularColor = vec4(0, 0, 0, 0);
     if(diffuseFactor > 0)
+    {
         diffuseColor = vec4(baseLight.color, 1) * baseLight.intensity * diffuseFactor;
-    return diffuseColor;
+        vec3 directionToEye = normalize(eyePosition - worldPosition);
+        vec3 directionOfReflection = normalize(reflect(direction, normal));
+        float specularFactor = dot(directionToEye, directionOfReflection);
+        specularFactor = pow(specularFactor, specularExponent);
+        if(specularFactor > 0)
+            specularColor = vec4(baseLight.color, 1) * specularIntensity * specularFactor;
+    }
+    return diffuseColor + specularColor;
 }
 
 vec4 calculateDirectionalLight(DirectionalLight directionalLight, vec3 normal)

@@ -9,23 +9,12 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e128396e-e405-4411-a432-05532a9044a3" name="Default" comment="Day 10 Pt. 1 - Implemented ambient lighting.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/rostiss/engine/BaseLight.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/rostiss/engine/DirectionalLight.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/Game.class" afterPath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/Game.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/Mesh.class" afterPath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/Mesh.class" />
+    <list default="true" id="e128396e-e405-4411-a432-05532a9044a3" name="Default" comment="Day 10 Pt. 2 - Implemented directional lights.">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/RenderUtil.class" afterPath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/RenderUtil.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Rostiss_Engine_Java_jar/Rostiss.jar" afterPath="$PROJECT_DIR$/out/artifacts/Rostiss_Engine_Java_jar/Rostiss.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/Shader.class" afterPath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/Shader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/Util.class" afterPath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/Util.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/Vertex.class" afterPath="$PROJECT_DIR$/out/production/Rostiss Engine Java/org/rostiss/engine/Vertex.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/rostiss/engine/BasicShader.java" afterPath="$PROJECT_DIR$/src/org/rostiss/engine/BasicShader.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/rostiss/engine/Game.java" afterPath="$PROJECT_DIR$/src/org/rostiss/engine/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/rostiss/engine/Mesh.java" afterPath="$PROJECT_DIR$/src/org/rostiss/engine/Mesh.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/rostiss/engine/Material.java" afterPath="$PROJECT_DIR$/src/org/rostiss/engine/Material.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/rostiss/engine/PhongShader.java" afterPath="$PROJECT_DIR$/src/org/rostiss/engine/PhongShader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/rostiss/engine/RenderUtil.java" afterPath="$PROJECT_DIR$/src/org/rostiss/engine/RenderUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/rostiss/engine/Shader.java" afterPath="$PROJECT_DIR$/src/org/rostiss/engine/Shader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/rostiss/engine/Util.java" afterPath="$PROJECT_DIR$/src/org/rostiss/engine/Util.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/rostiss/engine/Vertex.java" afterPath="$PROJECT_DIR$/src/org/rostiss/engine/Vertex.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/shaders/phong.rfs" afterPath="$PROJECT_DIR$/res/shaders/phong.rfs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/shaders/phong.rvs" afterPath="$PROJECT_DIR$/res/shaders/phong.rvs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -50,7 +39,65 @@
     <favorites_list name="Rostiss Engine Java" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Game.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.61300814">
+              <caret line="47" column="42" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Material.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Material.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="58" column="40" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
+              <folding>
+                <element signature="e#904#905#0" expanded="true" />
+                <element signature="e#947#948#0" expanded="true" />
+                <element signature="e#1476#1477#0" expanded="true" />
+                <element signature="e#1510#1511#0" expanded="true" />
+                <element signature="e#1553#1554#0" expanded="true" />
+                <element signature="e#1593#1594#0" expanded="true" />
+                <element signature="e#1658#1659#0" expanded="true" />
+                <element signature="e#1716#1717#0" expanded="true" />
+                <element signature="e#1797#1798#0" expanded="true" />
+                <element signature="e#1860#1861#0" expanded="true" />
+                <element signature="e#1916#1917#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PhongShader.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/PhongShader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="53" column="31" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
+              <folding>
+                <element signature="method#setDirectionalLight#0;class#PhongShader#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="phong.rfs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/shaders/phong.rfs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.896552">
+              <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+            <state />
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -91,7 +138,6 @@
         <option value="$PROJECT_DIR$/src/org/rostiss/engine/Vector2f.java" />
         <option value="$PROJECT_DIR$/src/org/rostiss/engine/Camera.java" />
         <option value="$PROJECT_DIR$/src/org/rostiss/engine/Matrix4f.java" />
-        <option value="$PROJECT_DIR$/src/org/rostiss/engine/Material.java" />
         <option value="$PROJECT_DIR$/src/org/rostiss/engine/BasicShader.java" />
         <option value="$PROJECT_DIR$/res/shaders/basic.rfs" />
         <option value="$PROJECT_DIR$/src/org/rostiss/engine/Transform.java" />
@@ -100,11 +146,12 @@
         <option value="$PROJECT_DIR$/src/org/rostiss/engine/BaseLight.java" />
         <option value="$PROJECT_DIR$/src/org/rostiss/engine/Shader.java" />
         <option value="$PROJECT_DIR$/src/org/rostiss/engine/DirectionalLight.java" />
-        <option value="$PROJECT_DIR$/res/shaders/phong.rfs" />
-        <option value="$PROJECT_DIR$/res/shaders/phong.rvs" />
         <option value="$PROJECT_DIR$/src/org/rostiss/engine/Mesh.java" />
-        <option value="$PROJECT_DIR$/src/org/rostiss/engine/PhongShader.java" />
         <option value="$PROJECT_DIR$/src/org/rostiss/engine/RenderUtil.java" />
+        <option value="$PROJECT_DIR$/src/org/rostiss/engine/Material.java" />
+        <option value="$PROJECT_DIR$/res/shaders/phong.rvs" />
+        <option value="$PROJECT_DIR$/src/org/rostiss/engine/PhongShader.java" />
+        <option value="$PROJECT_DIR$/res/shaders/phong.rfs" />
         <option value="$PROJECT_DIR$/src/org/rostiss/engine/Game.java" />
       </list>
     </option>
@@ -760,7 +807,7 @@
       <workItem from="1436383226398" duration="84000" />
       <workItem from="1436383402900" duration="10451000" />
       <workItem from="1436395607307" duration="20703000" />
-      <workItem from="1436453890227" duration="17367000" />
+      <workItem from="1436453890227" duration="18582000" />
     </task>
     <task id="LOCAL-00001" summary="Day 1 - Implemented basic static Window class using GLFW as well as a preliminary game loop and timing system in the MainComponent class.">
       <created>1436246850007</created>
@@ -846,15 +893,21 @@
       <option name="project" value="LOCAL" />
       <updated>1436496766230</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Day 10 Pt. 2 - Implemented directional lights.">
+      <created>1436565666342</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1436565666342</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72365000" />
+    <option name="totallyTimeSpent" value="73580000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -909,7 +962,8 @@
     <MESSAGE value="Day 9 Pt. 1 - Added basic texture support." />
     <MESSAGE value="Day 9 Pt. 2 - Finalized rendering system, improved and organized code throughout project, prepared for implementing Phong lighting model." />
     <MESSAGE value="Day 10 Pt. 1 - Implemented ambient lighting." />
-    <option name="LAST_COMMIT_MESSAGE" value="Day 10 Pt. 1 - Implemented ambient lighting." />
+    <MESSAGE value="Day 10 Pt. 2 - Implemented directional lights." />
+    <option name="LAST_COMMIT_MESSAGE" value="Day 10 Pt. 2 - Implemented directional lights." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1287,23 +1341,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Material.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8894309">
-          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-          <folding>
-            <element signature="e#950#951#0" expanded="true" />
-            <element signature="e#980#981#0" expanded="true" />
-            <element signature="e#1027#1028#0" expanded="true" />
-            <element signature="e#1065#1066#0" expanded="true" />
-            <element signature="e#1099#1100#0" expanded="true" />
-            <element signature="e#1127#1128#0" expanded="true" />
-            <element signature="e#1171#1172#0" expanded="true" />
-            <element signature="e#1205#1206#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/shaders/basic.rfs">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13821138">
@@ -1372,25 +1409,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/shaders/phong.rfs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53583616">
-          <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/shaders/phong.rvs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4699187">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Mesh.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.4650407">
@@ -1407,32 +1425,71 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/RenderUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08292683">
+          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1325#1326#0" expanded="true" />
+            <element signature="e#1372#1373#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Material.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="40" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
+          <folding>
+            <element signature="e#904#905#0" expanded="true" />
+            <element signature="e#947#948#0" expanded="true" />
+            <element signature="e#1476#1477#0" expanded="true" />
+            <element signature="e#1510#1511#0" expanded="true" />
+            <element signature="e#1553#1554#0" expanded="true" />
+            <element signature="e#1593#1594#0" expanded="true" />
+            <element signature="e#1658#1659#0" expanded="true" />
+            <element signature="e#1716#1717#0" expanded="true" />
+            <element signature="e#1797#1798#0" expanded="true" />
+            <element signature="e#1860#1861#0" expanded="true" />
+            <element signature="e#1916#1917#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/PhongShader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.69593495">
-          <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="53" column="31" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
           <folding>
             <element signature="method#setDirectionalLight#0;class#PhongShader#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/RenderUtil.java">
+    <entry file="file://$PROJECT_DIR$/res/shaders/phong.rvs">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08292683">
-          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1312#1313#0" expanded="true" />
-            <element signature="e#1359#1360#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.14190318">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/shaders/phong.rfs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.896552">
+          <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/rostiss/engine/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36422765">
-          <caret line="30" column="86" selection-start-line="30" selection-start-column="86" selection-end-line="30" selection-end-column="86" />
+        <state vertical-scroll-proportion="0.61300814">
+          <caret line="47" column="42" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
           <folding />
         </state>
       </provider>
