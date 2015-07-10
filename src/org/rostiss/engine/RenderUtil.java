@@ -1,7 +1,7 @@
 package org.rostiss.engine;
 
 import static org.lwjgl.opengl.GL11.*;
-import static org.lwjgl.opengl.GL30.GL_FRAMEBUFFER_SRGB;
+import static org.lwjgl.opengl.GL32.GL_DEPTH_CLAMP;
 
 /**
  * File: RenderUtil.java
@@ -27,8 +27,8 @@ public class RenderUtil {
         glCullFace(GL_BACK);
         glEnable(GL_CULL_FACE);
         glEnable(GL_DEPTH_TEST);
+        glEnable(GL_DEPTH_CLAMP);
         enableTextures(true);
-        glEnable(GL_FRAMEBUFFER_SRGB);
     }
 
     public static void enableTextures(boolean enabled) {

@@ -47,19 +47,19 @@ public class Shader {
 
     public void updateUniforms(Matrix4f world, Matrix4f projected, Material material) {}
 
-    public void setUniform1i(String name, int value) {
+    public void setUniform(String name, int value) {
         glUniform1i(uniforms.get(name), value);
     }
 
-    public void setUniform1f(String name, float value) {
+    public void setUniform(String name, float value) {
         glUniform1f(uniforms.get(name), value);
     }
 
-    public void setUniform3f(String name, Vector3f value) {
+    public void setUniform(String name, Vector3f value) {
         glUniform3f(uniforms.get(name), value.getX(), value.getY(), value.getZ());
     }
 
-    public void setUniform4f(String name, Matrix4f value) {
+    public void setUniform(String name, Matrix4f value) {
         glUniformMatrix4(uniforms.get(name), true, Util.createFlippedBuffer(value));
     }
 

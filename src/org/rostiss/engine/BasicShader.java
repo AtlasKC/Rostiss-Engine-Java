@@ -34,8 +34,8 @@ public class BasicShader extends Shader {
             material.getTexture().bind();
         else
             RenderUtil.unbindTextures();
-        setUniform4f("transform", projected);
-        setUniform3f("color", material.getColor());
+        setUniform("transform", projected);
+        setUniform("color", material.getColor());
     }
 
     public static BasicShader getInstance() {

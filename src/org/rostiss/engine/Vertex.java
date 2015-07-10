@@ -18,9 +18,9 @@ package org.rostiss.engine;
 
 public class Vertex {
 
-    public static final int SIZE = 5;
+    public static final int SIZE = 8;
 
-    private Vector3f position;
+    private Vector3f position, normal;
     private Vector2f textureCoordinate;
 
     public Vertex(Vector3f position) {
@@ -28,8 +28,13 @@ public class Vertex {
     }
 
     public Vertex(Vector3f position, Vector2f textureCoordinate) {
+        this(position, textureCoordinate, new Vector3f(0, 1, 0));
+    }
+
+    public Vertex(Vector3f position, Vector2f textureCoordinate, Vector3f normal) {
         this.position = position;
         this.textureCoordinate = textureCoordinate;
+        this.normal = normal;
     }
 
     public Vector3f getPosition() {
@@ -46,5 +51,13 @@ public class Vertex {
 
     public void setTextureCoordinate(Vector2f textureCoordinate) {
         this.textureCoordinate = textureCoordinate;
+    }
+
+    public Vector3f getNormal() {
+        return normal;
+    }
+
+    public void setNormal(Vector3f normal) {
+        this.normal = normal;
     }
 }

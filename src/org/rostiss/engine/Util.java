@@ -40,6 +40,9 @@ public class Util {
             result.put(vertex.getPosition().getZ());
             result.put(vertex.getTextureCoordinate().getX());
             result.put(vertex.getTextureCoordinate().getY());
+            result.put(vertex.getNormal().getX());
+            result.put(vertex.getNormal().getY());
+            result.put(vertex.getNormal().getZ());
         }
         result.flip();
         return result;

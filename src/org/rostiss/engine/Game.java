@@ -28,10 +28,10 @@ public class Game {
         mesh = new Mesh();
         camera = new Camera();
         shader = PhongShader.getInstance();
-        material = new Material(ResourceLoader.loadTexture("test.png"), new Vector3f(0, 1, 1));
+        material = new Material(ResourceLoader.loadTexture("test.png"), new Vector3f(1, 1, 1));
         transform = new Transform();
-        mesh.addVertices(new Vertex[] { new Vertex(new Vector3f(-1, -1, 0), new Vector2f(0, 0)), new Vertex(new Vector3f(0, 1, 0), new Vector2f(0.5f, 0)), new Vertex(new Vector3f(1, -1, 0), new Vector2f(1, 0)), new Vertex(new Vector3f(0, -1, 1), new Vector2f(0.5f, 1))}, new int[] { 3, 1, 0, 2, 1, 3, 0, 1, 2, 0, 2, 3 });
-        PhongShader.setAmbientLight(new Vector3f(0.1f, 0.1f, 0.1f));
+        mesh.addVertices(new Vertex[] { new Vertex(new Vector3f(-1, -1, 0), new Vector2f(0, 0)), new Vertex(new Vector3f(0, 1, 0), new Vector2f(0.5f, 0)), new Vertex(new Vector3f(1, -1, 0), new Vector2f(1, 0)), new Vertex(new Vector3f(0, -1, 1), new Vector2f(0.5f, 1))}, new int[] { 3, 1, 0, 2, 1, 3, 0, 1, 2, 0, 2, 3 }, true);
+        PhongShader.setDirectionalLight(new DirectionalLight(new BaseLight(new Vector3f(1, 1, 1), 0.8f), new Vector3f(1, 1, 1)));
         Transform.setProjection(75, Window.getWidth(), Window.getHeight(), 0.1f, 1000);
         Transform.setCamera(camera);
     }

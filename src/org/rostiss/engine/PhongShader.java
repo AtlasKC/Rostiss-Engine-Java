@@ -19,7 +19,8 @@ public class PhongShader extends Shader {
 
     private static final PhongShader instance = new PhongShader();
 
-    private static Vector3f ambientLight;
+    private static Vector3f ambientLight = new Vector3f(0.1f, 0.1f, 0.1f);
+    private static DirectionalLight directionalLight = new DirectionalLight(new BaseLight(new Vector3f(1, 1, 1), 0), new Vector3f(0, 0, 0));
 
     private PhongShader() {
         super();
@@ -27,8 +28,12 @@ public class PhongShader extends Shader {
         addFragment(ResourceLoader.loadShader("phong.rfs"));
         compileShader();
         addUniform("transform");
+        addUniform("projected");
         addUniform("baseColor");
         addUniform("ambientLight");
+        addUniform("directionalLight.baseLight.color");
+        addUniform("directionalLight.baseLight.intensity");
+        addUniform("directionalLight.direction");
     }
 
     public void updateUniforms(Matrix4f world, Matrix4f projected, Material material) {
@@ -36,9 +41,21 @@ public class PhongShader extends Shader {
             material.getTexture().bind();
         else
             RenderUtil.unbindTextures();
-        setUniform4f("transform", projected);
-        setUniform3f("baseColor", material.getColor());
-        setUniform3f("ambientLight", ambientLight);
+        setUniform("transform", world);
+        setUniform("projected", projected);
+        setUniform("baseColor", material.getColor());
+        setUniform("ambientLight", ambientLight);
+        setUniform("directionalLight", directionalLight);
+    }
+
+    public void setUniform(String name, BaseLight baseLight) {
+        setUniform(name + ".color", baseLight.getColor());
+        setUniform(name + ".intensity", baseLight.getIntensity());
+    }
+
+    public void setUniform(String name, DirectionalLight directionalLight) {
+        setUniform(name + ".baseLight", directionalLight.getBaseLight());
+        setUniform(name + ".direction", directionalLight.getDirection());
     }
 
     public static Vector3f getAmbientLight() {
@@ -47,6 +64,10 @@ public class PhongShader extends Shader {
 
     public static void setAmbientLight(Vector3f ambientLight) {
         PhongShader.ambientLight = ambientLight;
+    }
+
+    public static void setDirectionalLight(DirectionalLight directionalLight) {
+        PhongShader.directionalLight = directionalLight;
     }
 
     public static PhongShader getInstance() {
