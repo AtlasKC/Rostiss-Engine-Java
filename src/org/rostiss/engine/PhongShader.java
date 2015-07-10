@@ -19,13 +19,16 @@ public class PhongShader extends Shader {
 
     private static final PhongShader instance = new PhongShader();
 
+    private static Vector3f ambientLight;
+
     private PhongShader() {
         super();
-        addVertex(ResourceLoader.loadShader("basic.rvs"));
-        addFragment(ResourceLoader.loadShader("basic.rfs"));
+        addVertex(ResourceLoader.loadShader("phong.rvs"));
+        addFragment(ResourceLoader.loadShader("phong.rfs"));
         compileShader();
         addUniform("transform");
-        addUniform("color");
+        addUniform("baseColor");
+        addUniform("ambientLight");
     }
 
     public void updateUniforms(Matrix4f world, Matrix4f projected, Material material) {
@@ -34,7 +37,16 @@ public class PhongShader extends Shader {
         else
             RenderUtil.unbindTextures();
         setUniform4f("transform", projected);
-        setUniform3f("color", material.getColor());
+        setUniform3f("baseColor", material.getColor());
+        setUniform3f("ambientLight", ambientLight);
+    }
+
+    public static Vector3f getAmbientLight() {
+        return ambientLight;
+    }
+
+    public static void setAmbientLight(Vector3f ambientLight) {
+        PhongShader.ambientLight = ambientLight;
     }
 
     public static PhongShader getInstance() {

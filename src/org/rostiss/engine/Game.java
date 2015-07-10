@@ -25,14 +25,15 @@ public class Game {
     private Transform transform;
 
     public Game() {
-        mesh = ResourceLoader.loadMesh("cube.obj");
+        mesh = new Mesh();
         camera = new Camera();
         shader = PhongShader.getInstance();
-        material = new Material(ResourceLoader.loadTexture("test.png"), new Vector3f(1, 0, 0));
+        material = new Material(ResourceLoader.loadTexture("test.png"), new Vector3f(0, 1, 1));
         transform = new Transform();
-        transform.setProjection(75, Window.getWidth(), Window.getHeight(), 0.1f, 1000);
+        mesh.addVertices(new Vertex[] { new Vertex(new Vector3f(-1, -1, 0), new Vector2f(0, 0)), new Vertex(new Vector3f(0, 1, 0), new Vector2f(0.5f, 0)), new Vertex(new Vector3f(1, -1, 0), new Vector2f(1, 0)), new Vertex(new Vector3f(0, -1, 1), new Vector2f(0.5f, 1))}, new int[] { 3, 1, 0, 2, 1, 3, 0, 1, 2, 0, 2, 3 });
+        PhongShader.setAmbientLight(new Vector3f(0.1f, 0.1f, 0.1f));
+        Transform.setProjection(75, Window.getWidth(), Window.getHeight(), 0.1f, 1000);
         Transform.setCamera(camera);
-
     }
 
     public void input() {
@@ -46,7 +47,6 @@ public class Game {
         float SIN = (float) Math.sin(tmp);
         transform.setTranslation(SIN, 0, 5);
         transform.setRotation(0, (float) Math.sin(tmp) * 180, 0);
-        //transform.setScale(0.5f * (float) Math.sin(tmp), 0.5f * (float) Math.sin(tmp), 0.5f * (float) Math.sin(tmp));
     }
 
     public void render() {

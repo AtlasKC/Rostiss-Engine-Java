@@ -45,7 +45,7 @@ public class Transform {
         return projection.mul(cameraRotation.mul(cameraTranslation.mul(transformation)));
     }
 
-    public void setProjection(float fov, float width, float height, float zNear, float zFar) {
+    public static void setProjection(float fov, float width, float height, float zNear, float zFar) {
         Transform.fov = fov;
         Transform.width = width;
         Transform.height = height;
